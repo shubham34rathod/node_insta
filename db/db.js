@@ -4,8 +4,9 @@ require("dotenv").config()
 const Db_url=process.env.DB_URL + process.env.DATABASE
 
 mongoose.connect(Db_url)
+// mongoose.connect('mongodb+srv://shubhamrathod267:shubham123@cluster0.ewazkx5.mongodb.net/insta_clone?retryWrites=true&w=majority')
 .then(res=>{
-    console.log("connected")
+    console.log(`connected to database ${process.env.DATABASE}`)
 })
 .catch(res=>{
     console.log(res)
